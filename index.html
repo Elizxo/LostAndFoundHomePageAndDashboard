@@ -7,15 +7,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
+
+    <!-- Navbar -->
+    <nav class="navbar is-transparent">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <image></image>
+        </a>
+        <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://bulma.io/"> Home </a>
+          <div class="navbar-item has-dropdown is-active">
+            <a class="navbar-link" href="https://bulma.io/documentation/overview/start/"> Docs </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="https://bulma.io/documentation/overview/start/"> Overview </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Hello World
+        </h1>
+        <p class="subtitle">
+          My first website with <strong>Bulma</strong>!
+        </p>
+      </div>
+    </section>
+
   </body>
 </html>
+
+
+
