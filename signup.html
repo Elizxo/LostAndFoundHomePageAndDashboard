@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Signup - Lost and Found</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+  />
+</head>
+<body>
+  <section class="section" style="min-height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="box" style="max-width: 450px; width: 100%;">
+      <h1 class="title is-4 has-text-centered">Student Signup</h1>
+
+      <form id="signupForm">
+        <div class="field">
+          <label class="label">First Name</label>
+          <div class="control">
+            <input type="text" id="firstName" class="input" placeholder="First Name" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Last Name</label>
+          <div class="control">
+            <input type="text" id="lastName" class="input" placeholder="Last Name" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">NetID</label>
+          <div class="control">
+            <input type="text" id="netID" class="input" placeholder="NetID" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input type="password" id="password" class="input" placeholder="Password" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Phone Number</label>
+          <div class="control">
+            <input type="tel" id="phone" class="input" placeholder="Phone Number" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input type="email" id="email" class="input" placeholder="Email" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button type="submit" class="button is-link is-fullwidth">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      
+      // Collect form values
+      const data = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        netID: document.getElementById("netID").value,
+        password: document.getElementById("password").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value
+      };
+      
+      console.log("Form Submitted:", data);
+      
+      alert("Signup successful! Redirecting to homepage");
+      window.location.href = "homepage.html";
+    });
+  </script>
+</body>
+</html>
