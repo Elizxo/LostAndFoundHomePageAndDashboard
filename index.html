@@ -27,7 +27,6 @@
           </div>
 
           <h1 class="title is-4 has-text-centered">Login</h1>
-          <p id="errorMsg" class="has-text-danger has-text-centered is-hidden"></p>
 
           <form id="loginForm">
             <div class="field">
@@ -37,7 +36,7 @@
                   class="input"
                   type="email"
                   id="email"
-                  placeholder="e.g. student@kennesaw.edu"
+                  placeholder="Enter your email"
                   required
                 />
                 <span class="icon is-small is-left">
@@ -80,24 +79,11 @@
     </section>
 
     <script>
-      // Login handler
+      // Login handler: any input redirects to homepage
       document.getElementById("loginForm").addEventListener("submit", (e) => {
         e.preventDefault();
-
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-        const errorMsg = document.getElementById("errorMsg");
-
-        if (email === "student@kennesaw.edu" && password === "test123") {
-          errorMsg.classList.add("is-hidden");
-          alert("Login successful! Redirecting to homepage...");
-          window.location.href = "homepage.html";
-        } else {
-          errorMsg.textContent = "Invalid email or password.";
-          errorMsg.classList.remove("is-hidden");
-        }
+        window.location.href = "homepage.html"; 
       });
     </script>
   </body>
 </html>
-
